@@ -7,4 +7,4 @@ Adds menstruation effects and items like NPC comments, dripping blood, sanity na
 
 *Fertility Mode v3 Fixes and Tweaks*
 
-Meshes and textures from *Dripping when aroused*
+Meshes and textures from *Dripping when aroused* (loverslab.com/files/file/5123-dripping-when-aroused-se/)
