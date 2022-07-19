@@ -9,7 +9,6 @@ MiscObject Property SanityNapkin Auto
 MagicEffect Property Menstruation Auto 
 Bool Property isSanityNapkinRegisterd Auto Conditional
 
-
 Event OnInit()
 	Player.AddSpell(MenstruationSpell)
 	LItemMiscVendorMiscItems75.AddForm(SanityNapkinList,1,1)
@@ -34,6 +33,8 @@ Function plugItUp()
 				Player.RemoveItem(SanityNapkin,1)
 				RegisterForSingleUpdateGameTime(maxInt(1,HoursToExpireSanityNapkin.GetValueInt()))
 				isSanityNapkinRegisterd = True
+			Else
+				Debug.Notification("You need a new Sanity napkin.")
 			EndIf
 		EndIf
 	Else
