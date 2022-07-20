@@ -1,5 +1,5 @@
 # Fertility-Menstruation-Effects
-Adds menstruation effects and items like NPC comments, dripping blood, sanity napkin to fertility mod
+Adds menstruation effects and items like NPC comments, dripping blood, sanitary napkin to fertility mod
 
 *Requirement:*
 
