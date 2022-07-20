@@ -43,7 +43,7 @@ Function plugItUp()
 				RegisterForSingleUpdateGameTime(maxInt(1,HoursToExpireSanityNapkin.GetValueInt()))
 				isSanityNapkinRegisterd = True
 			Else
-				Debug.Notification("You need a new Sanity napkin.")
+				Debug.Notification("You need a new Sanitary napkin.")
 			EndIf
 		EndIf
 	Else
