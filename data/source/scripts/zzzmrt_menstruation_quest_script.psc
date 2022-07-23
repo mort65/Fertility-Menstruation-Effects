@@ -9,10 +9,22 @@ MiscObject Property SanityNapkin Auto
 MagicEffect Property Menstruation Auto
 GlobalVariable Property gLItemMiscVendorMiscItems75 Auto
 GlobalVariable Property JSW_BB_Enabled  Auto
+GlobalVariable Property DrippingBloodCommentsToggle Auto
+GlobalVariable Property DrippingBloodHelpfulCommentsToggle Auto
 Faction Property JSW_SUB_TrackedFemFaction Auto
 Faction Property JSW_SUB_CycleBuffFaction Auto
 
 Bool Property isSanityNapkinRegisterd Auto Conditional
+
+
+Float Function getBaseVersion()
+	Return 1.0
+EndFunction
+
+Float Function getCurrentVersion()
+	Return getBaseVersion() + 0.02
+EndFunction
+
 
 Event OnInit()
 	Player.AddSpell(DrippingBloodSpell)
@@ -26,7 +38,7 @@ EndEvent
 
 Event OnUpdateGameTime()
 	isSanityNapkinRegisterd = False
-	Utility.Wait(3.0)
+	RegisterForSingleUpdate(15.0)
 	plugItUp()
 EndEvent
 
@@ -43,7 +55,7 @@ Function plugItUp()
 				RegisterForSingleUpdateGameTime(maxInt(1,HoursToExpireSanityNapkin.GetValueInt()))
 				isSanityNapkinRegisterd = True
 			Else
-				Debug.Notification("You need a new Sanitary napkin.")
+				Debug.Notification("You need a new sanitary napkin.")
 			EndIf
 		EndIf
 	Else
@@ -70,7 +82,7 @@ Function stopThis()
 	Player.RemoveSpell(DrippingBloodSpell)
 EndFunction
 
-Function resetThis()
+Function startThis()
 	OnInit()
 EndFunction
 

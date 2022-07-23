@@ -5,6 +5,6 @@ Quest Property MenstruationQuest Auto
 
 Event OnContainerChanged(ObjectReference akNewContainer, ObjectReference akOldContainer)
 	If ((akNewContainer != None) && (Player as ObjectReference == akNewContainer))
-		MenstruationQuest.RegisterForSingleUpdate(1.0)
+		MenstruationQuest.RegisterForSingleUpdate(5.0)
 	EndIf
 EndEvent
